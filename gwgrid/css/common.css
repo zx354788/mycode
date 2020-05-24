@@ -1,0 +1,214 @@
+/* 声明字体图标 */
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?tomleg');
+	src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+		url('../fonts/icomoon.woff?tomleg') format('woff'),
+		url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+/*格式化样式*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;} 
+table {border-collapse:collapse;border-spacing:0;} 
+fieldset,img {border:0} 
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal} 
+ol,ul {list-style:none} 
+caption,th {text-align:left} 
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal} 
+q:before,q:after {content:''} 
+abbr,acronym { border:0}
+* {
+padding: 0px;
+margin: 0px;
+font-family:Arial, Verdana, Tahoma, "宋体", Helvetica, sans-serif;
+line-height: 150%;
+}
+body {
+font-size: 14px;
+text-align: center;
+color: #000000;
+background-color: #FFFFFF;
+background-image: url(../Images/body_bg.jpg);
+background-repeat: repeat-x;
+}
+
+td {
+padding: 3px;
+}
+img {
+border: none;
+}
+input {
+padding: 1px;
+vertical-align: middle;
+line-height: normal;
+}
+.main-box {
+margin-right: auto;
+margin-left: auto;
+width: 960px;
+clear: both;
+zoom:1;
+overflow:hidden;
+background-color: #CCCCCC;
+}
+.text-overflow-hidden {
+white-space: nowrap;
+word-spacing: normal;
+letter-spacing: normal;
+overflow: hidden;
+}
+.box-align-center {
+margin-right: auto;
+margin-left: auto;
+}
+/*css定义超链接四个状态也有顺序的。*/
+
+a:link, a:visited {
+text-decoration: none;
+color: #1F376D;
+}
+a:hover, a:active {
+text-decoration: none;
+color: #BD0A01;
+border: none;
+}
+
+.top {
+	height: 120px;
+	position: relative;
+}
+.center {
+	width: 1200px;
+	margin: 0 auto;
+}
+.top_left {
+	float: left;
+}
+.top_left .logo {
+	width: 360px;
+	margin-top: 43px;
+}
+.top_right {
+	float: right;
+	margin-top: 10px;
+}
+.top_right .language {
+	position: absolute;
+	top: 10px;
+	right: 350px;
+	width: 103px;
+	height: 27px;
+	background-color: rgba(255,255,255,.8);
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	transition: height .5s;
+	overflow: hidden;
+}
+.top_right .language:hover {
+	height: 55px;
+}
+.language:hover .icon_arrows {
+	transform: rotate(180deg);
+}
+.top_right .language li {
+	text-align: center;
+	height: 27px;
+	line-height: 27px;
+}
+.top_right .language .icon_cn {
+	width: 22px;
+	display: block;
+	float: left;
+	margin-left: 15px ;
+	margin-top: 5px;
+	background: url(../images/national_cn.png) no-repeat;
+	
+}
+.top_right .language .icon_arrows {
+	float: right;
+	margin: 8px;
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: url(../images/icon_arrows.png) no-repeat;
+	background-size: 100%;
+	transition: transform .5s;
+}
+.top_right .language .icon_en {
+	width: 22px;
+	display: block;
+	float: left;
+	margin-left: 15px ;
+	margin-top: 5px;
+	background: url(../images/national_en.png) no-repeat;
+}
+.top_right .nav {
+	margin-top: 35px;
+}
+.top_right .nav li {
+	float: left;
+	margin: 10px 20px;
+}
+.top_right .nav li a:hover {
+	color: #fcc02e;
+}
+.banner {
+	height: 600px;
+	background: url(../images/index_bg.jpg) center center no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+.banner h4 {
+	padding-top: 50px;
+	margin-left: 10px;
+	text-align: left;
+	color: #fff;
+	font-size: 23px;
+	letter-spacing: 4px;
+}
+.banner p {
+	margin-top: 10px;
+	margin-left: 10px;
+	text-align: left;
+	color: #fff;
+	font-size: 14px;
+}
+.abc {
+	height: 800px;
+}
+footer {
+	height: 260px;
+	background-color: #2b2b2b;
+}
+.footer {
+	width: 400px;
+	text-align: center;
+	color: #666666;
+}
+.footer img {
+	width: 250px;
+	margin: 40PX 0;
+}
+.footer .bottom_nav li {
+	display: inline-block;
+	margin: 10PX 20px;
+	text-align: center;
+}
+.footer .bottom_nav li a {
+	color: #666666;
+	font-size: 16px;
+}
+.line {
+	/* height: 1px; */
+	border: 1px solid #666666;
+}
+.copyright {
+	margin-top: 15PX;
+}
+.mobile a {
+	color: #666;
+}

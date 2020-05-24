@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.login {
+				width: 600px;
+				margin: 100px auto; 
+			}
+			input {
+				width: 180px;
+				padding: 0 5px;
+				height: 20px;
+				color: #CCCCCC;
+				font-size: 14px;
+			}
+			.change {
+				outline: none;
+				border: 1px #ffd6db solid;
+				color: #4C4C4C;
+			}
+			button {
+				width: 60px;
+				height: 25px;
+				background-color: #0098c2;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="login">
+			<input type="text" value="邮箱/ID/手机号" class="user-Name">
+			<input type="text" value="密码" class="password">
+			<button type="button">登录</button>
+		</div>
+		<script type="text/javascript">
+			var userName = document.querySelector('.user-Name');
+			var password = document.querySelector('.password');
+			userName.onfocus = function() {
+					if (this.value ==='邮箱/ID/手机号') {
+						this.value = '';
+						this.className = 'user-Name change';
+					}
+			}
+			userName.onblur = function() {
+					if (this.value ==='') {
+						this.value = '邮箱/ID/手机号';
+						this.className = 'user-Name';
+					}
+			}
+			password.onfocus = function() {
+					if (this.value ==='密码') {
+						this.value = '';
+						this.type = 'password';
+						this.className = 'user-Name change';
+					}
+			}
+			password.onblur = function() {
+					if (this.value ==='') {
+						this.value = '密码';
+						this.type = 'text';
+						this.className = 'user-Name';
+					}
+			}
+		</script>
+		
+	</body>
+</html>

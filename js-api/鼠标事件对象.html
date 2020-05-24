@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 6000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			document.addEventListener('click',function(e){
+				// client 鼠标再可视区域的 x和 y坐标
+				console.log(e.clientX);
+				console.log(e.clientY);
+				
+				// pag 鼠标在页面文档的x 和y 坐标
+				console.log(e.pagX);
+				console.log(e.pagY);
+				
+				// screen 鼠标在电脑屏幕的坐标
+				console.log(e.screenX);
+				console.log(e.screenY);
+			})
+		</script>
+	</body>
+</html>

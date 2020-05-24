@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			.top {
+				height: 30px;
+				background-color: yellow;
+			}
+			.conten {
+				position: relative;
+				width: 1200px;
+				height: 1000px;
+				margin: 0 auto;
+			}
+			.title {
+				width: 100px;
+				height: 30px;
+				color: red;
+				line-height: 30px;
+				text-align: center;
+			}
+			.dropdown {
+				position: absolute;
+				top:14px ;
+				left: -40px;
+				width: 100px;
+				display: none;
+			}
+			.dropdown li {
+				list-style: none;
+				height: 20px;
+				line-height: 20px;
+				background-color: #87CEEB;
+				text-align: center;
+				font-size: 14px;
+				color: #FFAC13;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="conten">
+				<h4 class="title">菜单</h4>
+				<ul class="dropdown">
+					<li>菜单1</li>
+					<li>菜单2</li>
+					<li>菜单3</li>
+					<li>菜单4</li>
+					<li>菜单5</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var dropdown = document.querySelector('.dropdown');
+			var title = document.querySelector('.title');
+			title.onmousemove = function() {
+				this.style.backgroundColor = 'red';
+				this.style.color = '#ccc';
+				dropdown.style.display = 'block';
+			}
+			dropdown.onmouseover = function() {
+				title.style.backgroundColor = 'red';
+				title.style.color = '#ccc';
+				this.style.display = 'block';
+			}
+			title.onmouseout = function() {
+				this.style.backgroundColor = 'yellow';
+				this.style.color = 'red';
+				dropdown.style.display = 'none';
+			}
+			dropdown.onmouseout = function() {
+				title.style.backgroundColor = 'yellow';
+				title.style.color = 'red';
+				this.style.display = 'none';
+			}
+		</script>
+	</body>
+</html>

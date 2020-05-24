@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				position: absolute;
+				left: 0;
+				margin-top: 100px;
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+			span {
+				display: block;
+				position: absolute;
+				left: 0;
+				margin-top: 250px;
+				background-color: #F5DEB3;
+				width: 80px;
+				height: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<span></span>
+		<button type="button" class="goback">点击黄色盒子往前后动</button>
+		<button type="button" class="go">点击黄色盒子往前移动</button>
+		<script type="text/javascript">
+			var div = document.querySelector('div');
+			var span = document.querySelector('span');
+			var goback = document.querySelector('.goback');
+			var go = document.querySelector('.go');
+			
+			function animate(obj, target,callback) {
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function(){
+					//Math.ceil()  往上取整
+					//Math.floor()  往下取整
+					// var step = Math.ceil((target - obj.offsetLeft) / 10);
+					var step = (target - obj.offsetLeft) / 10;
+					step = step > 0 ? Math.ceil(step) : Math.floor(step);
+					if (obj.offsetLeft ==target){
+						clearInterval(obj.timer);
+						callback && callback();
+					}
+					//公式：（目标值 - 现在的位置） / 10 作为每次移动的距离步长
+					obj.style.left = obj.offsetLeft + step +'px';
+				},20)
+			}
+			// animate(div,200);
+			// animate(span,100);
+			go.addEventListener('click', function(){
+				animate(div,500);
+			})
+			goback.addEventListener('click', function(){
+				animate(div,0);
+			})
+		</script>
+	</body>
+</html>

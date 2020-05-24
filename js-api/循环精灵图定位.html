@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 300px;
+				margin: 100px auto;
+			}
+			.box ul li {
+				list-style: none;
+				width: 24px;
+				height: 24px;
+				margin: 15px;
+				float: left;
+				background: url(images/icon.png) no-repeat;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var lis = document.querySelectorAll('li');
+			for (var i = 0; i < lis.length; i++) {
+				var index = i * 44;
+				lis[i].style.backgroundPosition = '0 -'+ index +'px';
+			}
+		</script>
+	</body>
+</html>

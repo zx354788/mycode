@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" id="allcheck" value="" />全选
+		<div id="checkboxs">
+			<input type="checkbox" id="" value="" />选项1
+			<input type="checkbox" id="" value="" />选项2
+			<input type="checkbox" id="" value="" />选项3
+		</div>
+		<script type="text/javascript">
+			var allcheck = document.getElementById('allcheck');
+			var checks = document.getElementById('checkboxs').getElementsByTagName('input');
+			//第一步，点击全选框后面的选项全部选中
+			allcheck.onclick = function() {
+				for (var i = 0; i < checks.length; i++) {
+					checks[i].checked = this.checked;
+				}
+			}
+			//第二步，当全部选项选中后，全选框选中，否则全选框不选中
+			for (var i = 0; i < checks.length; i++) {
+				checks[i].onclick = function() {
+					var flag = true;
+					for (var i = 0; i < checks.length; i++) {
+						if (!checks[i].checked) {
+							flag = false;
+							break; //退出for循环，提高执行效率
+						}
+					}
+					allcheck.checked = flag;
+				}
+			}
+		</script>
+	</body>
+</html>

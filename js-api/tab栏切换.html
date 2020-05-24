@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			.tab {
+				width: 800px;
+				margin: 50px auto;
+			}
+			.tab .tab_list {
+				height: 30px;
+			}
+			.tab .tab_list ul li {
+				list-style: none;
+				float: left;
+				/* padding: 0 20px; */
+				width: 160px;
+				line-height: 30px;
+				text-align: center;
+				/* background-color: yellow; */
+				display: block;
+			}
+			.tab .tab_list ul li:hover {
+				cursor: pointer;
+			}
+			.tab_list .current {
+				background-color: red;
+			}
+			.tab .tab_content .item {
+				width: 800px;
+				height: 500px;
+				background-color: #ccc;
+				display: none;
+			}
+			.tab .tab_content .s {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tab">
+			<div class="tab_list">
+				<ul>
+					<li class="current">商品介绍</li>
+					<li>规格包装</li>
+					<li>售后保障</li>
+					<li>商品评价</li>
+					<li>手机社区</li>
+				</ul>
+			</div>
+			<div class="tab_content">
+				<div class="item s">
+					商品介绍模块
+				</div>
+				<div class="item">
+					规格包装模块
+				</div>
+				<div class="item">
+					售后保障模块
+				</div>
+				<div class="item">
+					商品评价模块
+				</div>
+				<div class="item">
+					手机社区模块
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var tab_list = document.querySelector('.tab_list');
+			var lis = tab_list.querySelectorAll('li');
+			var items = document.querySelectorAll('.item');
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].setAttribute('index', i);
+				lis[i].onclick = function() {
+					for (var i = 0; i < lis.length; i++) {
+						lis[i].className = '';
+					}
+					this.className = 'current';
+					var index = this.getAttribute('index');
+					// console.log(index);
+					for (var i = 0; i < items.length; i++) {
+						items[i].style.display = 'none';
+					}
+					items[index].style.display = 'block';
+				}
+			}
+		</script>
+	</body>
+</html>

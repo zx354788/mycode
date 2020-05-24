@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// var age = prompt('请输入您的年龄：');
+			// if(age >= 18) {
+			// 	alert('欢迎光临！')
+			// }
+			// else {
+			// 	alert('未成年，回家睡觉去！');
+			// }
+			// var year = prompt('请输入年份：');
+			// if (year % 4 ==0 && year % 100 != 0 || year % 400 == 0) {
+			// 	alert('这是闰年');
+			// } else {
+			// 	alert('这是平年');
+			// }
+			
+			// if...else if 语句
+			// var score = prompt('请输入您的分数:');
+			// if (score >= 90) {
+			// 	alert('A');
+			// } else if (score >= 80) {
+			// 	alert('B');
+			// } else if (score >= 70) {
+			// 	alert('C');
+			// } else if (score >= 60) {
+			// 	alert('D');
+			// } else {
+			// 	alert('E');
+			// }
+			
+			// 三元表达式用法
+			// var time = prompt('请输入一个0~59之间的数字：');
+			// var result = time < 10 ? '0'+time : time;
+			// alert(result);
+			
+			// switch语句
+			// var fruit = prompt('请输入需要查询价钱的水果名字：');
+			// switch(fruit) {
+			// 	case '苹果':
+			// 		alert('苹果的价格是5元/斤');
+			// 		break;
+			// 	case '西瓜':
+			// 		alert('西瓜的价格是2元/斤');
+			// 		break;
+			// 	default:
+			// 		alert('没有找到您想要的水果！');
+			// }
+			// var time = prompt('请输入现在是几点:');
+			// if (time<11) {
+			// 	alert('早上好！');
+			// } else if (time < 14) {
+			// 	alert('中午好！');
+			// } else if (time < 18) {
+			// 	alert('下午好！');
+			// } else if (time < 24) {
+			// 	alert('晚上好！');
+			// } else {
+			// 	alert('输入有误！');
+			// }
+			// var num1 = prompt('请输入第一个数字：');
+			// var num2 =prompt('请输入第二个数字：');
+			// var result = num1 > num2 ? num1 : num2 ;
+			// alert(result);
+			// var num = prompt('请输入数字：');
+			// if (num % 2==0) {
+			// 	alert('偶数');
+			// } else {
+			// 	alert('基数');
+			// }
+			// var num = prompt('请输入数字：');
+			// switch (Number(num)) {     //这里必须注意要转换数据类型
+			// 	case 1:
+			// 		alert('星期一');
+			// 		break;
+			// 	case 2:
+			// 		alert('星期二');
+			// 		break;
+			// 	case 3:
+			// 		alert('星期三');
+			// 		break;
+			// 	case 4:
+			// 		alert('星期四');
+			// 		break;
+			// 	case 5:
+			// 		alert('星期五');
+			// 		break;
+			// 	case 6:
+			// 		alert('星期六');
+			// 		break;
+			// 	case 7:
+			// 		alert('星期天');
+			// 		break;
+			// 	default :
+			// 		alert('undefined');
+			// }
+			// var moneny = prompt('我有多少钱：');
+			// if (moneny > 2000) {
+			// 	document.write('请大家吃西餐');
+			// } else if (moneny >1500) {
+			// 	document.write('请大家吃kuai餐');
+			// } else if (moneny > 1000) {
+			// 	document.write('请大家喝饮料');
+			// } else if (moneny >= 500) {
+			// 	document.write('请大家吃tang');
+			// } else {
+			// 	document.write('没钱，下次再请');
+			// }
+			// var num = prompt('请输入次数');
+			// for (var i = 1; i <= num; i++) {
+			// 	document.write('我要学会JavaScript');
+			// }
+			// for (var i=1;i<=100;i++){
+			// 	if(i==1){
+			// 		console.log('今年'+i+'岁了，刚出生');
+			// 	} else if (i==99){
+			// 		console.log('今年'+i+'岁,还没死')
+			// 	}
+			// 	 else if (i==100){
+			// 	 	console.log('今年'+i+'岁了,死了')
+			// 	 }else{
+			// 		console.log('今年'+i+'岁了')
+			// 	}
+			// }
+			// var sum = 0;
+			// var average = 0;
+			// for (var i =1; i<=100; i++) {
+			// 	sum+=i;
+			// }
+			// average = sum/100;
+			// console.log(average);
+			// var num = prompt('请输入班级总人数');
+			// var sum = 0;
+			// var average = 0;
+			// for (var i = 1; i <= num; i++) {
+			// 	var score = prompt('请输入第'+i+'个同学分数');
+			// 	sum = sum + Number(score);
+			// }
+			// average = sum / num;
+			// alert(sum);
+			// alert(average);
+			// var num = prompt('请输入星星数目');
+			// var str ='';
+			// for(var i=1;i<=num;i++) {
+			// 	str = str+'★';
+			// }
+			// console.log(str);
+			// var str ='';
+			// for (var i = 1 ; i <= 10; i++) {
+			// 	for (var j = i; j <= 10; j++) {
+			// 		str = str + '哈';
+			// 	}
+			// 	str = str + '\n';
+			// }
+			// console.log(str)
+			// var str = '';
+			// for (var i = 1; i <= 5; i++) {
+			// 	for (var n = 1; n <= 5; n++) {
+			// 		str = str + '⊙'
+			// 	}
+			// 	str = str + '\n'
+			// }
+			// console.log(str)
+			// var str = '';     //乘法九九表
+			// for (var i = 1; i <= 9; i++) {
+			// 	for (var j = 1; j <= i; j++) {
+			// 		str += j + '×' + i + '=' + i * j + '\t' ;
+			// 	}
+			// 	str += '\n' ;
+			// }
+			// console.log(str);
+			// var i = 1;
+			// while (i <=100) {
+			// 	console.log('爱你'+ i+ '年');
+			// 	i++;
+			// }
+			// var sum = 0;
+			// var	j = 1 ;
+			// while (j <=100) {
+			// 	sum += j;
+			// 	j++;
+			// }
+			// console.log(sum);
+			// var str = prompt('你爱我吗？');
+			// while (str !== '我爱你') {
+				
+			// 	str = prompt('你爱我吗');
+			// }
+			// alert('顶你')
+			// var age = 1;
+			// do {
+			// 	console.log('今年'+age+'岁了');
+			// 	age++;
+			// } while (age <= 100);
+			// var i = 1;
+			// var sum = 0;
+			// do {
+			// 	sum +=i;
+			// 	i++;
+				
+			// } while (i <=100);
+			// console.log(sum);
+			// for (var i = 1;  i <= 5; i++) {
+			// 	if (i==3) {
+			// 		continue;
+			// 	}
+			// 	console.log(i);
+			// }
+			// var sum = 0;
+			//  for (var i = 1; i <=100; i++) {
+			// 	 if (i % 7 ==0) {
+			// 		 continue;
+			// 	 }
+			// 	 sum += i;
+			//  }
+			//  console.log(sum);
+			// var sum = 0;
+			// var average = 0;
+			// for (var i = 1; i <= 100; i++) {
+			// 	sum += i;
+			// 	average = sum / i;
+			// }
+			// console.log(average);
+			// console.log(sum);
+			// var multiple = 0;
+			// for (var i = 1; i <= 100; i++) {
+			// 	if (i % 7 ==0) {
+			// 		multiple += i;
+			// 	}
+			// }
+			// console.log(multiple);
+			// var str = '';
+			// for (var i = 1; i <= 5; i++) {
+			// 	for (var j =1; j <= 5;j++) {
+			// 		str += '☆';
+			// 	}
+			// 	 str += '\n';
+			// }
+			// console.log(str);
+			// var str = '';
+			// for (var i = 1; i <= 5; i++) {
+			// 	for (var j = 1; j <=i; j++) {
+			// 		str += '☆';
+			// 	}
+			// 	str += '\n';
+			// }
+			// console.log(str);
+			// var str = '';
+			// for (var i = 1; i <=9 ; i++) {
+			// 	for (j = 1; j <= i; j++) {
+			// 		str = str + j + '×' + i + '=' + i * j + '\t';
+			// 	}
+			// 	str += '\n';
+			// }
+			// console.log(str);
+			// var user = prompt('请输入用户名');
+			// var password = prompt('请输入密码');
+			// while (user !== 'admin' && password !== '123456') {
+			// 	user = prompt('请输入用户名');
+			// 	password = prompt('请输入密码');
+			// 	alert('用户名或者密码错误，请重新输入')
+			// } 
+			// alert('用户名密码正确，登录成功！')
+			// var sum = 0;
+			// for (var i = 1; i <= 100; i++) {
+			// 	if (i % 10 == 3) {
+			// 		continue;
+			// 	}
+			// 	sum += i;
+			// }
+			// console.log(sum);
+			// var week = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天'];
+			// console.log(week[6]);
+			// var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+			// for (var i = 0; i < arr.length; i++) {
+			// 	console.log(arr[i]);
+			// }
+			// var arr = [2, 6, 1, 7, 4];
+			// var sum = 0;
+			// var average = 0;
+			// for (var i = 0; i < arr.length; i++) {
+			// 	sum += arr[i];
+			// }
+			// average = sum / arr.length;
+			// console.log(sum, average);
+			// var arr = [1001, 2552, 65, -5, 3.14];
+			// var max =arr[0];
+			// for (var i = 1; i < arr.length; i++) {
+			// 	if (arr[i] > max) {
+			// 		max = arr[i];
+			// 	}
+			// }
+			// console.log(max);
+			// var str = '';
+			// var sep = '/';
+			// var arr = ['小明', '小红', '小云', '小花', '小东'];
+			// for (var i = 0; i < arr.length; i++) {
+			// 	str += arr[i] + sep;
+			// }
+			// console.log(str);
+			// var arr = [];
+			// for (i = 0; i < 10; i++) {
+			// 	arr[i] = i + 1;
+			// }
+			// console.log(arr);
+			// var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+			// var newArr = [];
+			// var j = 0 ;
+			// for (var i = 0; i <= arr.length; i++) {
+			// 	if (arr[i] > 10) {
+			// 		newArr[j] = arr[i];
+			// 		j++;
+			// 	}
+			// }
+			// console.log(newArr);
+			// var arr = [1, 2, 3, 4, 5, 6, 7];
+			// var newArr =[];
+			// for (var i = arr.length - 1; i >=0; i--) {
+			// 	newArr[newArr.length] = arr[i];
+			// }
+			// console.log(newArr);
+			// var arr = [8, 9, 4, 3, 6, 2];
+			// for (var i = 0; i <= arr.length - 1; i++) {
+			// 	for (var j = 0; j <= arr.length - i - 1; j++) {
+			// 		if (arr[j] > arr[j+1]) {
+			// 			var temp = arr[j];
+			// 			arr[j] = arr[j +1];
+			// 			arr[j +1] = temp;
+			// 		}
+			// 	}
+			// }
+			// console.log(arr);
+			// function getSum(num1, num2) {
+			// 	return num1 + num2;
+			// }
+			// console.log(getSum(5, 5));
+			// function getSums(start, end) {
+			// 	var sum = 0;
+			// 	for (var i = start; i <= end; i++) {
+			// 		sum += i;
+			// 	}
+			// 	return sum;
+			// }
+			// console.log(getSums(1, 100));
+			// function getMax(num1, num2){
+			// 	// if (num1 > num2) {
+			// 	// 	return num1;
+			// 	// } else {
+			// 	// 	return num2;
+			// 	// }
+			// 	return num1 > num2 ? num1 : num2;
+			// }
+			// console.log(getMax(8, 10));
+			// function getArrMax(arr) {
+			// 	var max = arr[0];
+			// 	for (var i = 1; i <= arr.length; i++) {
+			// 		if (arr[i] > max) {
+			// 			max = arr[i];
+			// 		}
+			// 	}
+			// 	return max;
+			// }
+			// var re = getArrMax([ 1, 3, 67, 77]);
+			// console.log(re);
+			// var num1 = prompt('请输入第一个数');
+			// var num2 = prompt('请输入第二个数');
+			// function getSum(num1,num2) {
+			// 	return num1 + num2;
+			// }
+			// var re = getSum(num1,num2);
+			// alert(re);
+			// function getMax() {
+			// 	var max = arguments[0];
+			// 	for (var i =1; i < arguments.length; i++) {
+			// 		if (arguments[i] > max) {
+			// 			max = arguments[i];
+			// 		}
+			// 	}
+			// 	return max;
+			// }
+			// console.log(getMax(1, 50, 100, 95, 1001, 1543));
+			// function reverse(arr) {
+			// 	var newArr = [0];
+			// 	for (var i = arr.length - 1; i >= 0; i--) {
+			// 		newArr[newArr.length] = arr[i];
+			// 	}
+			// 	return newArr;
+			// }
+			// var arr1 = reverse([5, 4, 3, 2, 1]);
+			// console.log(arr1)
+			// function sort(arr) {
+			// 	for (var i = 0; i < arr.length - 1; i++) {
+			// 		for (var j = 0; j < arr.length - i - 1; j++) {
+			// 			if (arr[j] > arr[j + 1]) {
+			// 				var temp = arr[j];
+			// 				arr[j] = arr[j + 1];
+			// 				arr[j + 1] = temp;
+			// 			}
+			// 		}
+			// 	}
+			// 	return arr;
+			// }
+			// var arr1 = sort([5, 1, 6, 11, 78, -4, 1001]);
+			// console.log(arr1);
+			// function isRunYear(year) {
+			// 	var flag = false;
+			// 	if (year % 4 ==0 && year % 100 != 0 || year % 400 == 0) {
+			// 		flag = true;
+			// 	}
+			// 	return flag;
+			// }
+			// // console.log(isRunYear(1999));
+			// // console.log(isRunYear(2000));
+			// function backDay() {
+			// 	var year = prompt('请输入年份查询2月份的天数');
+			// 	if (isRunYear(year)) {
+			// 		alert('当前年份是闰年2月份有29天');
+			// 	} else {
+			// 		alert('当前年份是平年2月份有28天');
+			// 	}
+			// }
+			// backDay();
+			// var obj = new Object();
+			// obj.uname = '鸣人';
+			// obj.sex = '男';
+			// obj.age = 19;
+			// obj.skill = '多重影分身术';
+			// console.log(obj.uname);
+			// console.log(obj['sex']);
+			// console.log(obj.age);
+			// console.log(obj.skill);
+			// function King(uname, age, sex) {
+			// 	this.name = uname;
+			// 	this.age = age;
+			// 	this.sex = sex;
+			// }
+			// var liming = new King('黎明', 55, '男');
+			// console.log(liming);
+			// var obj = {
+			// 	name: 'v',
+			// 	age: 28,
+			// 	sex: 'man',
+			// }
+			// for (var k in obj) {
+			// 	console.log(k);
+			// 	console.log(obj[k]);
+			// }
+			// var myMath = {
+			// 	PI: 3.141592653,
+			// 	max: function() {
+			// 		var max = arguments[0];
+			// 		for (var i = 1; i < arguments.length; i++) {
+			// 			if (arguments[i] > max) {
+			// 				max = arguments[i];
+			// 			}
+			// 		}
+			// 		return max;
+			// 	},
+			// 	min: function() {
+			// 		var min = arguments[0];
+			// 		for (var i = 1; i < arguments.length; i++) {
+			// 			if (arguments[i] < min) {
+			// 				min = arguments[i];
+			// 			}
+			// 		}
+			// 		return min;
+			// 	}
+			// }
+			// console.log(myMath.PI);
+			// console.log(myMath.max(-1, 5, 1001, 200));
+			// console.log(myMath.min(-1, 5, 1001, 200));
+			// function getRandom(min, max) {
+			//   return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+			// }
+			// var random = getRandom(1,50);
+			// for (var i = 9; i >= 0; i--) {
+			// 	var num = prompt('请输入1~50之间的数字');
+			// 	if (num > random) {
+			// 		alert('你猜大了,你还有'+ i +'次机会');
+			// 	} else if (num < random) {
+			// 		alert('你猜小了,你还有'+ i +'次机会');
+			// 	} else {
+			// 		alert('恭喜你猜对了');
+			// 		break;
+			// 	}	
+			// }
+			// function countDown(time) { 
+			// 	var nowTime = +new Date();
+			// 	var inputTime = +new Date(time);
+			// 	var times = (inputTime - nowTime) / 1000;
+			// 	var d = parseInt(times / 60 / 60 / 24); //天
+			// 	d = d < 10 ? '0' + d : d;
+			// 	var h = parseInt(times / 60 / 60 % 24); //时
+			// 	h = h < 10 ? '0' + h : h;
+			// 	var m = parseInt(times / 60 % 60); //分
+			// 	m = m < 10 ? '0' + m : m;
+			// 	var s = parseInt(times % 60); //秒
+			// 	s = s < 10 ? '0' + s : s;
+			// 	return d + '天' + h + '时' + m + '分' + s + '秒';
+			// }
+			// console.log(countDown('2020-5-8 00:36:00'));
+			// var date = new Date();
+			// console.log(date);
+			// var arr = [1500, 1200, 2000, 2100, 1800];
+			// var newArr = [];
+			// for (var i = 0; i < arr.length; i++) {
+			// 	if (arr[i] < 2000) {
+			// 		newArr.push(arr[i]);
+			// 	}
+			// }
+			// console.log(newArr);
+			//翻转数组
+			// var arr = [1, 4, 7, 2, 5, 8, 3, 6, 9];
+			// arr.reverse();
+			// console.log(arr);
+			// //升序排列
+			// var arr = [1, 4, 7, 2, 5, 8, 3, 6, 9];
+			// arr.sort(function (a, b) {
+			// 	return a - b;
+			// })
+			// console.log(arr);
+			// //降序排列
+			// var arr = [1, 4, 7, 2, 5, 8, 3, 6, 9];
+			// arr.sort(function (a, b) {
+			// 	return b - a;
+			// })
+			// console.log(arr);
+			// function unique(arr) {
+			// 	var newArr = [];
+			// 	for (var i = 0; i < arr.length; i++) {
+			// 		if (newArr.indexOf(arr[i]) === -1) {
+			// 			newArr.push(arr[i]);
+			// 		}
+			// 	}
+			// 	return newArr;
+			// }
+			// var demo = unique(['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'])
+			// console.log(demo);
+			// var str = "abcoefoxyozzopp";
+			// var index = str.indexOf('o');
+			// var num = 0;
+			// // console.log(index);
+			// while (index !== -1) {
+			// 	console.log(index);
+			// 	num++;
+			// 	index = str.indexOf('o', index + 1);
+			// }
+			// console.log('出现o的次数是' + num);
+			// var str = ['red', 'blue', 'red', 'green', 'pink', 'red'];
+			// var str = ['red', 'blue', 'red', 'green', 'pink', 'red'];
+			// var index = str.indexOf('red');
+			// var num = 0;
+			// while (index !== -1) {
+			// 	console.log(index);
+			// 	num++;
+			// 	index = str.indexOf('red', index + 1);
+			// }
+			// console.log('出现red的次数是' + num);
+			// var str = 'abcoefoxyozzopp';
+			// var o = {};
+			// for (var i = 0; i < str.length; i++) {
+			// 	var chars = str.charAt(i);  //chars是字符串的每一个字符
+			// 	if (o[chars]) {
+			// 		o[chars]++;
+			// 	} else {
+			// 		o[chars] = 1;
+			// 	}
+			// }
+			// console.log(o);
+			// //遍历对象
+			// var max = 0;
+			// var ch = '';
+			// for (var k in o) { //遍历对象o
+			// 	if (o[k] > max) {
+			// 		max = o[k];
+			// 		ch = k;
+			// 	}
+			// }
+			// console.log(max);
+			// console.log('最多的字符是' + ch);
+			
+			// //replace('被转变的字符', '要转变的字符')
+			// var str = 'andyandy';
+			// console.log(str.replace('a', 'b'));
+			// var str1 = 'abcoefoxyozzopp';
+			// while (str1.indexOf('o') !== -1) {
+			// 	str1 = str1.replace('o', '#');
+			// }
+			// console.log(str1);
+			// //split 把字符串转换成数组 join（）把数字转换成字符串
+			// var str2 = '1,2,3,5,6,7,8';
+			// console.log(str2.split(','));
+			var str = 'abaasdffggghhjjkkgfddsssss3444343';
+			console.log('str字符串的长度是 ' + str.length);
+			console.log(str.charAt(0));
+			console.log(str.charAt(3));
+			console.log(str.charAt(5));
+			console.log(str.charAt(9));
+			console.log(str.indexOf('i'));
+			console.log(str.indexOf('c'));
+			console.log(str.indexOf('b'));
+			while (str.indexOf('g') !== -1) {
+				str = str.replace('g', '22');
+			}
+			console.log(str);
+			while (str.indexOf('ss') !== -1) {
+				str = str.replace('ss', 'b');
+			}
+			console.log(str);
+			console.log(str.substr(0, 5));
+			var o = {};
+			for (var i = 0; i < str.length; i++) {
+				var chars = str.charAt(i);
+				if (o[chars]) {
+					o[chars]++;
+				} else {
+					o[chars] = 1;
+				}
+			}
+			var max = 0;
+			var ch = '';
+			for (var k in o) {
+				if (o[k] > max) {
+					max = o[k];
+					ch = k;
+				}
+			}
+			console.log(max, 'str中最多的字符是' + ch);
+			
+ 		</script>
+	</head>
+	<body>
+	</body>
+</html>

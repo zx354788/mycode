@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				margin: 50px auto;
+				width: 400px;
+			}
+			span {
+				width: 100px;
+				height: 100px;
+				background-color: #202020;
+				display: inline-block;
+				font-size: 40px;
+				color: yellow;
+				text-align: center;
+				line-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span class="year">1</span>
+			<span class="month">2</span>
+			<span class="day">3</span>
+		</div>
+		<div>
+			<span class="hour">1</span>
+			<span class="minute">2</span>
+			<span class="second">3</span>
+		</div>
+		<script type="text/javascript">
+			var year = document.querySelector('.year');
+			var month = document.querySelector('.month');
+			var day = document.querySelector('.day');
+			var hour = document.querySelector('.hour');
+			var minute = document.querySelector('.minute');
+			var second = document.querySelector('.second');
+			// var inputTime = +new Date('2020-5-18 00:00:00');
+			time();
+			setInterval(time,1000);
+			function time() {
+				var times = new Date();
+				var y = times.getFullYear();
+				year.innerHTML = y;
+				var mon = times.getMonth();
+				mon = mon < 10 ? '0' + mon : mon;
+				month.innerHTML = mon;
+				var d = times.getDate();
+				d = d < 10 ? '0' + d : d;
+				day.innerHTML = d;
+				var h = times.getHours();
+				h = h < 10 ? '0' + h : h;
+				hour.innerHTML = h;
+				var m = times.getMinutes();
+				m = m < 10 ? '0' + m : m;
+				minute.innerHTML = m;
+				var s =times.getSeconds();
+				s = s < 10 ? '0' + s: s;
+				second.innerHTML = s;
+			}
+		</script>
+	</body>
+</html>

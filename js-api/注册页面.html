@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 600px;
+				margin: 100px auto;
+			}
+			.message {
+				display: inline-block;
+				font-size: 0.75rem;
+				color: #999;
+				background: url(images/提示.png) no-repeat left center;
+				padding-left: 20px;
+				
+			}
+			.wrong {
+				color: red;
+				background-image: url(images/错误.png);
+			}
+			.right {
+				color: green;
+				background-image: url(images/成功.png);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="register">
+			<input type="password" name="" class="ipt" value="" />
+			<p class="message">请输入6~16位密码</p>
+		</div>
+		<script type="text/javascript">
+			var ipt = document.querySelector('.ipt');
+			var message = document.querySelector('.message');
+			ipt.onblur = function() {
+				if (this.value.length < 6 || this.value.length > 16) {
+					message.className = 'message wrong';
+					message.innerHTML = '你输入的密码有误，请输入6~16位密码';
+				} else {
+					message.className = 'message right';
+					message.innerHTML = '密码格式正确';
+				}
+			}
+		</script>
+	</body>
+</html>

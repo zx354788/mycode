@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.center {
+				position: relative;
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.top,.banner,.content,.footer {
+				margin-bottom: 10px;
+			}
+			.top {
+				height: 100px;
+				background-color: #1BA1E6;
+			}
+			.banner {
+				height: 500px;
+				background-color: #81C459;
+			}
+			.content {
+				height: 1200px;
+				background-color: #999999;
+			}
+			.footer {
+				height: 200px;
+				background-color: yellow;
+			}
+			.sider-bar {
+				position: absolute;
+				left: 50%;
+				margin-left: 600px;
+				top: 510px;
+				background-color: orange;
+				width: 40px;
+				height: 100px;
+			}
+			.goback {
+				display: none;
+				position: absolute;
+				bottom: 0;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sider-bar">
+			<span class="goback">返回顶部</span>
+		</div>
+		<div class="top center">top</div>
+		<div class="banner center">banner</div>
+		<div class="content center">内容区域</div>
+		<div class="footer center">footer</div>
+		
+		
+		<script type="text/javascript">
+			var siderbar = document.querySelector('.sider-bar');
+			var banner = document.querySelector('.banner');
+			var content = document.querySelector('.content');
+			var goback = document.querySelector('.goback');
+			var bannerTop = banner.offsetTop;
+			var siderbarTop = siderbar.offsetTop - banner.offsetTop;
+			var contentTop = content.offsetTop;
+			window.addEventListener('scroll',function(){
+				// console.log(window.pageYOffset);
+				if(window.pageYOffset >=bannerTop ) {
+					siderbar.style.position = 'fixed';
+					siderbar.style.top = siderbarTop + 'px';	
+					
+				} else {
+					siderbar.style.position = 'absolute';
+					siderbar.style.top = '510px';
+				}
+				if (window.pageYOffset >= contentTop) {
+					goback.style.display = 'block';
+				} else {
+					goback.style.display = 'none';
+				}
+			})
+			goback.addEventListener('click',function(){
+				animate(window,0);
+			});
+			//动画函数
+			function animate(obj, target, callback) {
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function() {
+					//Math.ceil()  往上取整
+					//Math.floor()  往下取整
+					var step = (target - window.pageYOffset) / 10;
+					step = step > 0 ? Math.ceil(step) : Math.floor(step);
+					if (window.pageYOffset == target) {
+						clearInterval(obj.timer);
+						callback && callback();
+						//上面代码 callback && callback(); 等同于以下
+						// if (callback) {  
+						// 	callback();
+						// }
+					}
+					window.scroll(0, window.pageYOffset + step);
+				}, 20)
+			}
+		</script>	
+	</body>
+</html>

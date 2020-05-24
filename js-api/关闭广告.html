@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				position: relative;
+				width: 800px;
+				height: 100px;
+				margin: 50px auto;
+				background-color: yellow;
+			}
+			.close {
+				position: absolute;
+				right: -17px;
+				top: 5px;
+				height: 16px;
+				width: 16px;
+				background: url(images/close.png) no-repeat;
+			}
+			.close:hover {
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="advertising">
+			这是一个广告
+			<span class="close"></span>
+		</div>
+		<script type="text/javascript">
+			var close = document.querySelector('.close');
+			var advertising = document.querySelector('.advertising');
+			close.onclick = function() {
+				advertising.style.display = 'none';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .big {
+            margin-top: 100px;
+            margin-left: 100px;
+            background-color: yellow;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            cursor: move;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #666666;
+            display: none;
+            pointer-events:none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div class="small"></div>
+    </div>
+    <script>
+        var big = document.querySelector('.big');
+        var small = document.querySelector('.small');
+        big.addEventListener('mouseover',function(){
+            small.style.display = 'block';
+            this.style.border = '1px solid #ccc';
+        })
+        big.addEventListener('mouseout',function(){
+            small.style.display = 'none';
+        })
+        big.addEventListener('mousemove', function (e) {
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            smallY = y - small.offsetHeight/2;
+            smallX = x - small.offsetHeight/2;
+            var smallMax = this.offsetWidth - small.offsetWidth;
+            if (smallX <= 0) {
+                smallX = 0;
+            } else if (smallX >= smallMax) {
+                smallX = smallMax;
+            }
+            if (smallY <= 0) {
+                smallY = 0;
+            } else if (smallY >= smallMax) {
+                smallY = smallMax;
+            }
+            small.style.top = smallY+'px';
+            small.style.left = smallX+'px';
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: url(images/bg1.jpg) no-repeat;
+				background-size: 130%;
+			}
+			.skin {
+				width: 1000px;
+				margin: 300px auto;
+			}
+			.skin ul li {
+				list-style: none;
+				float: left;
+				margin: 0 10px;
+			}
+			.skin ul li img {
+				width: 150px;
+				height: 75px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="skin">
+			<ul>
+				<li><img src="images/bg1.jpg" ></li>
+				<li><img src="images/bg2.jpg" ></li>
+				<li><img src="images/bg3.jpg" ></li>
+				<li><img src="images/bg4.jpg" ></li>
+				<li><img src="images/bg5.jpg" ></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			// var bg = document.getElementsByTagName('body'); //body 元素不用获取
+			var skins = document.querySelector('.skin').querySelectorAll('img');
+			for (var i = 0; i < skins.length; i++) {
+				skins[i].onclick = function() {
+					document.body.style.backgroundImage = 'url('+ this.src +')';
+				}
+			}
+		</script>
+	</body>
+</html>

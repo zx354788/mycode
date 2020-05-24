@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.search {
+				position: relative;
+				width: 178px;
+				margin: 100px;
+			}
+			.con {
+				display: none;
+				position: absolute;
+				top: -40px;
+				width: 171px;
+				border: 1px solid rgba(0,0,0,.2);
+				box-shadow: 0 2px 4px rgba(0,0,0,.2);
+				padding: 5px 0;
+				font-weight: 18px;
+				line-height: 20px;
+				color: #333;
+			}
+			.com::before {
+				content: '';
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 28px;
+				left: 18px;
+				border: 8px solid #000000;
+				border-style: solid dashed dashed;
+				 border-color: #fff transparent transparent; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="search">
+			<div class="con">123</div>
+			<input type="text" name="" class="jd" placeholder="请输入您的快递单号" />
+		</div>
+		<script type="text/javascript">
+			var con = document.querySelector('.con');
+			var jd_input = document.querySelector('.jd');
+			jd_input.addEventListener('keyup',function(){
+				// console.log('123');
+				if (this.value == ''){
+					con.style.display = '';
+				} else {
+					con.style.display = 'block';
+					con.innerHTML = this.value;
+				}
+			})
+			jd_input.addEventListener('blur',function(){
+				con.style.display = 'none';
+			})
+			jd_input.addEventListener('focus',function(){
+				if (con.style.display !== '') {
+					con.style.display = 'block';
+				}
+			})
+		</script>
+	</body>
+</html>

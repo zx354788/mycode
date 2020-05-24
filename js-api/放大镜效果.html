@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jd.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+			.preview_img {
+				position: relative;
+				margin-top: 50px;
+				margin-left: 50px;
+				width: 450px;
+				height: 450px;
+				border: 1px solid #CCCCCC;
+			}
+			
+			.mask {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 250px;
+				height: 250px;
+				background-color: yellow;
+				opacity: .3;
+				cursor: move;
+				/* pointer-events:none; */ /*阻止鼠标事件*/
+			}
+			.big {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 520px;
+				width: 600px;
+				height: 600px;
+				overflow: hidden;
+				z-index: 999;
+				border: 1px solid #CCCCCC;
+			}
+			.big .bigImg {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="preview_img">
+			<img src="images/iPhone.jpg" alt="">
+			<div class="mask"></div>
+			<div class="big">
+				<img src="images/iPhone_big.jpg" alt="" class="bigImg">
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button">传统注册事件</button>
+		<button type="button">方法监听注册事件</button>
+		<button>ie9 attachEvent</button>
+		
+		<script type="text/javascript">
+			//传统注册事件，只能弹窗一次
+			var btns = document.querySelectorAll('button');
+			btns[0].onclick = function() {
+				alert('hello');
+			}
+			btns[0].onclick = function() {
+				alert('haha');
+			}
+			//方法监听注册事件，不兼容IE9以下浏览器
+			btns[1].addEventListener('click',function(){
+				alert('hello');
+			})
+			btns[1].addEventListener('click',function(){
+				alert('world');
+			})
+			//attachEvent IE9以下的方法(了解)
+			btns[2].attachEvent('onclick',function(){
+				alert(133)
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.addEventListener('keyup',function(){
+				alert(123)
+			})
+			// keypress不能识别功能键
+			document.addEventListener('keypress',function(){
+				alert(123)
+			})
+			document.addEventListener('keydown',function(){
+				alert(123)
+			})
+			// 三个事件的执行顺序是： keydown.keypress.keyup
+		</script>
+	</body>
+</html>

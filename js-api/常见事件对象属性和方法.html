@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div>123</div>
+		<ul>
+			<li>abc</li>
+			<li>abc</li>
+			<li>abc</li>
+		</ul>
+		<a href="http://www.baidu.com">百度</a>
+		
+		<script type="text/javascript">
+			// e.target 返回的是触发事件的对象（元素） this 返回的是绑定事件的对象（元素）
+			// 区别 e.target 点击了那个元素，就返回被点击的元素  this 哪个元素绑定的点击事件，那就返回谁
+			var div = document.querySelector('div');
+			div.addEventListener('click',function(e){
+				console.log(e.target);
+				console.log(this);
+			})
+			var ul = document.querySelector('ul');
+			ul.addEventListener('click',function(e) {
+				console.log(this);
+				console.log(e.target);
+			})
+			// 阻止默认行为（事件）,让链接不跳转或者按钮不提交
+			var a = document.querySelector('a');
+			a.addEventListener('click', function(e){
+				e.preventDefault(); // dom 标准写法
+			})
+			// 传统的注册方式
+			a.onclick = function(e){
+				// 普通浏览器 e.preventDefault()
+				e.preventDefault();
+				// 低版本ie 678 returnValue
+				e.returnValue;
+				// 直接用return false ,没有兼容问题，不过return后面的代码不再执行
+				return false;
+			}
+		</script>
+	</body>
+</html>
